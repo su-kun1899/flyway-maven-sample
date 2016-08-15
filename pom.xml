@@ -15,14 +15,20 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>4.0.3</version>
                 <configuration>
-                    <url>jdbc:h2:file:./target/foobar</url>
-                    <user>sa</user>
+                    <url>jdbc:mysql://localhost:3306/flyway_test</url>
+                    <user>test_user</user>
+                    <password>hogehoge</password>
                 </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
                         <version>1.4.191</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.6</version>
                     </dependency>
                 </dependencies>
             </plugin>
